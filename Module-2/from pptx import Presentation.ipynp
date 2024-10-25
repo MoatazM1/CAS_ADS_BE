@@ -1,0 +1,86 @@
+from pptx import Presentation
+from pptx.util import Inches
+
+# Create a presentation object
+prs = Presentation()
+
+# Slide 1: Title Slide
+slide_1 = prs.slides.add_slide(prs.slide_layouts[0])
+title = slide_1.shapes.title
+subtitle = slide_1.placeholders[1]
+title.text = "Gene Expression Data and Hypothesis Testing"
+subtitle.text = "Overview of Gene Regulation and Statistical Tests"
+
+# Slide 2: Gene Expression Data Overview
+slide_2 = prs.slides.add_slide(prs.slide_layouts[1])
+title_2 = slide_2.shapes.title
+title_2.text = "Gene Expression Data"
+content_2 = slide_2.shapes.placeholders[1].text_frame
+content_2.text = "Gene expression data is used to study the regulation of genes at the transcriptional, translational, and post-translational levels."
+p = content_2.add_paragraph('Key Components')
+p.level = 1
+p = content_2.add_paragraph("• ARE (Adenylate-Uridylate Rich Elements) control mRNA stability.")
+p.level = 2
+p = content_2.add_paragraph("• tAI (tRNA Adaptation Index) measures translation efficiency.")
+p.level = 2
+p = content_2.add_paragraph("• hl (Half-life of mRNA).")
+p.level = 2
+p = content_2.add_paragraph("• TPU.length (Length of Translated Protein Units).")
+p.level = 2
+
+# Slide 3: What is Gene Regulation?
+slide_3 = prs.slides.add_slide(prs.slide_layouts[1])
+title_3 = slide_3.shapes.title
+title_3.text = "What is Gene Regulation?"
+content_3 = slide_3.shapes.placeholders[1].text_frame
+content_3.text = "Gene regulation controls when and how genes are expressed in cells."
+p = content_3.add_paragraph("Levels of Gene Regulation:")
+p.level = 1
+p = content_3.add_paragraph("• Transcriptional")
+p.level = 2
+p = content_3.add_paragraph("• Post-transcriptional (e.g., AREs and miRNAs)")
+p.level = 2
+p = content_3.add_paragraph("• Translational (e.g., tAI)")
+p.level = 2
+p = content_3.add_paragraph("• Post-translational (e.g., protein folding)")
+p.level = 2
+
+# Slide 4: Statistical Hypothesis Tests
+slide_4 = prs.slides.add_slide(prs.slide_layouts[1])
+title_4 = slide_4.shapes.title
+title_4.text = "Statistical Hypothesis Tests"
+content_4 = slide_4.shapes.placeholders[1].text_frame
+content_4.text = "Three statistical tests were used to analyze the gene expression data."
+p = content_4.add_paragraph("1. Spearman’s Correlation: Measures monotonic relationships between variables.")
+p = content_4.add_paragraph("2. Mann-Whitney U Test: Compares two independent groups (e.g., 'loc_var').")
+p = content_4.add_paragraph("3. Kruskal-Wallis Test: Compares multiple groups (e.g., 'id' datasets).")
+
+# Slide 5: Spearman’s Correlation
+slide_5 = prs.slides.add_slide(prs.slide_layouts[1])
+title_5 = slide_5.shapes.title
+title_5.text = "Spearman’s Correlation"
+content_5 = slide_5.shapes.placeholders[1].text_frame
+content_5.text = "Spearman’s correlation was used to measure the relationship between ARE and TPU.length."
+p = content_5.add_paragraph("• Statistic: 0.726")
+p = content_5.add_paragraph("• p-value: 0.0 (Highly significant)")
+
+# Slide 6: Mann-Whitney U Test
+slide_6 = prs.slides.add_slide(prs.slide_layouts[1])
+title_6 = slide_6.shapes.title
+title_6.text = "Mann-Whitney U Test"
+content_6 = slide_6.shapes.placeholders[1].text_frame
+content_6.text = "Mann-Whitney U test compared ARE between 'loc_var' = 'Not significant' and other values."
+p = content_6.add_paragraph("• Statistic: 1.25e+09")
+p = content_6.add_paragraph("• p-value: 2.43e-16 (Highly significant)")
+
+# Slide 7: Kruskal-Wallis Test
+slide_7 = prs.slides.add_slide(prs.slide_layouts[1])
+title_7 = slide_7.shapes.title
+title_7.text = "Kruskal-Wallis Test"
+content_7 = slide_7.shapes.placeholders[1].text_frame
+content_7.text = "The Kruskal-Wallis test compared ARE across different datasets ('id')."
+p = content_7.add_paragraph("• Statistic: 202.15")
+p = content_7.add_paragraph("• p-value: 1.17e-36 (Highly significant)")
+
+# Save the presentation
+prs.save("Gene_Expression_Analysis_Presentation.pptx")
