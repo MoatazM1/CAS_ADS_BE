@@ -1,9 +1,42 @@
-# CAS-Applied-Data-Science
-Repository for course material for the CAS Applied Data Science at the University of Bern
 
-The CAS homepage is https://www.unibe.ch/continuing_education_programs/cas_in_applied_data_science/index_eng.html. 
-Regulations and the study plan are linked there. Also registration information and schedules are maintained there. 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sigvehaug/CAS-Applied-Data-Science)
+# GitHub Repository for the CAS Applied Data Science
 
-S. Haug, 2021-08-23
+Below you will find an overview of the different modules which will be part of this CAS program
+
+## Module 1: Data Acquisition and Management
+* Learn to understand** different data sources and types** and how to design data management models and plans
+
+---
+
+## Module 2: Statistical Inference for Data Science
+* Gain basic understanding of **statistical modules** used for analysis and **descriptive statistics**
+
+---
+
+## Module 3: Data Analysis and Machine Learning
+* Overview of **machine learning pipelines** and their implementation with scikit-learn
+* **Regression** and** Classification**: linear models and logistic regression
+* Decision trees & **random forest models**
+* Principal component analysis **(PCA)** and non-linear embeddings **(t-SNE and UMAP**)
+* Clustering with **K-means** and **Gaussian mixtures**
+* **Artificial Neural networks** as general fitters, fully connected nets used to classify the fashion-MNIST dataset
+* **Scikit-learn** and clustering maps, Q&A
+
+---
+
+## Module 4: Ethics and Best Practices
+* Create **GitHub repository** for your CAS material and projects
+* **Document repository and subfolders** with Readme files
+
+
+---
+
+## Module 5: Peer Consulting and Selected Readings
+* **Peer knowledge exchange** and **consultation groups**
+* Discussion and Collaboration with peers on key concepts and practical applications
+
+---
+
+## Module 6: Deep Learning
+* **TensorFlow** for deep learning applications
